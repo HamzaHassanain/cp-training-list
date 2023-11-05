@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/code-forces.ico"
+      type="image/x-icon"
+    />
+    <title>CP Training</title>
+  </head>
+  <body>
+    <nav>
+      <div class="handle-containers">
+        <form id="cf-login">
+          <input
+            type="text"
+            class="login cf-login"
+            placeholder="Codeforces Handle"
+            name="cf-handle"
+          />
+        </form>
+        <button id="remove-handle">&#10006;</button>
+      </div>
+      <div class="logo">
+        <img src="assets/code-forces.png" alt="logo.png" width="64" />
+      </div>
+    </nav>
+
+    <main>
+      <div class="welcome">
+        <h2>Welocome <span id="welcome-name"></span> !</h2>
+      </div>
+
+      <form id="add-problem-form">
+        <input
+          type="text"
+          class="problem-link"
+          name="problem-url"
+          placeholder="Problem Link"
+        />
+        <button class="add-btn">Add</button>
+      </form>
+
+      <ul class="problem-list"></ul>
+    </main>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

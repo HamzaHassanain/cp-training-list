@@ -1,0 +1,225 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #e9e9e9;
+}
+nav {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+nav .handle-containers {
+  display: flex;
+  align-items: center;
+  justify-content: none;
+}
+nav .handle-containers input {
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  color: black;
+  border-radius: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  margin: 0;
+}
+nav .links {
+  display: flex;
+  align-items: center;
+}
+
+nav .login {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+}
+.handle-containers {
+  display: flex;
+}
+#remove-handle {
+  cursor: pointer;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  outline: none;
+
+  background-color: rgb(204, 0, 0);
+  color: #fff;
+  border: none;
+  /* border: 4px solid rgb(204, 0, 0); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.delete-problem {
+  cursor: pointer;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  outline: none;
+
+  background-color: rgb(230, 41, 41);
+  color: #fff;
+  border: none;
+  /* border: 4px solid rgb(204, 0, 0); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+nav .links .cf-login {
+  background-color: rgb(204, 0, 0);
+}
+
+main {
+  width: 70%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.welcome {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#add-problem-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+#add-problem-form input {
+  padding: 0.7rem;
+  font-size: 1rem;
+  outline: none;
+  width: 90%;
+  border-radius: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+#add-problem-form .add-btn {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  width: 10%;
+
+  background-color: rgb(0, 204, 0);
+  color: #fff;
+  border: none;
+  border: 4px solid rgb(0, 204, 0);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#add-problem-form {
+  margin-bottom: 2rem;
+}
+
+.problem-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0.5rem;
+}
+.problem-list li {
+  list-style: none;
+}
+
+.problem-list .problem-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.problem-list .problem-list-item .problem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.problem-list .problem-list-item .problem a {
+  color: black;
+  text-decoration: none;
+  padding: 1rem;
+}
+.problem-list .problem-list-item .problem .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.problem-list .problem-list-item .problem .btns button {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  margin: 0;
+  border: none;
+}
+.problem-list .problem-list-item .problem .btns button.acc {
+  background-color: rgb(0, 204, 0);
+  color: #fff;
+}
+.problem-list .problem-list-item .problem .btns button.wa {
+  background-color: rgb(204, 0, 0);
+  color: #fff;
+}
+
+.problem-list .problem-list-item.acc {
+  background-color: rgb(0, 204, 0);
+  color: #fff;
+}
+.problem-list .problem-list-item.acc a {
+  color: #fff;
+}
+.problem-list .problem-list-item.wa {
+  background-color: rgb(204, 0, 0);
+  color: #fff;
+}
+.problem-list .problem-list-item.wa a {
+  color: #fff;
+}
+.problem-list .problem-list-item.wa .problem .btns {
+  display: flex;
+}
+.problem-list .problem-list-item.wa .problem .btns .wa {
+  order: 1;
+}
+.problem-list .problem-list-item.wa .problem .btns .acc {
+  order: 2;
+}
+.problem-list .problem-list-item.wa .problem .btns .none {
+  order: 3;
+}
+
+.problem-list .problem-list-item.acc .problem .btns .wa {
+  order: 2;
+}
+.problem-list .problem-list-item.acc .problem .btns .acc {
+  order: 1;
+}
+.problem-list .problem-list-item.acc .problem .btns .none {
+  order: 3;
+}
+
+.problem-list .problem-list-item.none .problem .btns .wa {
+  order: 3;
+}
+.problem-list .problem-list-item.none .problem .btns .acc {
+  order: 2;
+}
+.problem-list .problem-list-item.none .problem .btns .none {
+  order: 1;
+}
