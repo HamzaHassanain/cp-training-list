@@ -6,6 +6,7 @@ const removeHandleBtn = document.querySelector("#remove-handle");
 const addProblemForm = document.querySelector("#add-problem-form");
 const problemList = document.querySelector(".problem-list");
 const welcome = document.querySelector("#welcome-name");
+
 init();
 
 function init() {
@@ -31,7 +32,7 @@ async function handleAddProblemFormSubmit(e) {
 
   const url = addProblemForm["problem-url"].value;
 
-  if (problem_eixits(url)) {
+  if (problem_exists(url)) {
     alert("Problem already exits");
     return;
   }
@@ -90,11 +91,13 @@ function create_problem_html(name, url, status) {
 }
 function set_problem_event_listeners() {
   const problem_list_items = document.querySelectorAll(".problem-list-item");
+
   problem_list_items.forEach((item) => {
     const acc_btn = item.querySelector(".acc");
     const wa_btn = item.querySelector(".wa");
     const none_btn = item.querySelector(".none");
     const delete_btn = item.querySelector(".delete-problem");
+
     acc_btn.addEventListener("click", () => {
       handle_acc(item);
     });
@@ -147,6 +150,7 @@ function handle_delete(item) {
   ls.set("problem-list", new_problem_list);
   item.remove();
 }
+
 function generate_problem_list_html(problem_list) {
   return problem_list
     .map((problem) =>
@@ -163,7 +167,7 @@ function update_problem_status(url, status) {
   problem.status = status;
   ls.set("problem-list", problem_list);
 }
-function problem_eixits(url) {
+function problem_exists(url) {
   const problem_list = ls.get("problem-list") || [];
   const problem = problem_list.find((problem) => problem.url === url);
   if (!problem) return false;
